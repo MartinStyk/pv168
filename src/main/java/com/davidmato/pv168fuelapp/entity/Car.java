@@ -17,7 +17,7 @@ public class Car {
 	}
 	@Override
 	public int hashCode(){
-		return id.hashCode()*7;
+		return id.hashCode();
 	}
 	
 	public Long getId() {
