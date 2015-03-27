@@ -4,6 +4,7 @@ import common.DBHelper;
 import common.ServiceFailureException;
 import com.davidmato.pv168fuelapp.entity.Car;
 import com.davidmato.pv168fuelapp.entity.CarType;
+import com.davidmato.pv168fuelapp.entity.FillUp;
 import com.davidmato.pv168fuelapp.entity.FuelType;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,16 +13,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.sql.DataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class CarManagerImpl implements CarManager {
     
-    private static final Logger logger = Logger.getLogger(
-            CarManagerImpl.class.getName());
-    
+    private final static Logger logger = LoggerFactory.getLogger(CarManagerImpl.class);
+  
     private DataSource dataSource;
     
     public CarManagerImpl() {
@@ -39,7 +39,7 @@ public class CarManagerImpl implements CarManager {
         if (car.getId() != null) {
             throw new IllegalArgumentException("id of car is set");
         }
-        
+        logger.info("Inserting "+car+"in db");
         try (Connection connection = dataSource.getConnection()) {
             
             try (PreparedStatement st = connection.prepareStatement(
@@ -62,14 +62,14 @@ public class CarManagerImpl implements CarManager {
             } catch (SQLException ex) {
                 connection.rollback();
                 String msg = "Error when inserting "+ car +" into db";
-                logger.log(Level.SEVERE, msg, ex);
+                logger.error(msg, ex);
                 throw new ServiceFailureException(msg, ex);
             } finally {
                 connection.setAutoCommit(true);
             }
         } catch (SQLException ex) {
             String msg = "Error in getting connection when inserting "+ car +" into db";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
         
@@ -83,7 +83,7 @@ public class CarManagerImpl implements CarManager {
         if (car.getId() == null) {
             throw new IllegalArgumentException("id of car is not set");
         }
-        
+        logger.info("Updating "+car+"in db");
         try (Connection connection = dataSource.getConnection()) {
             
             try (PreparedStatement st = connection.prepareStatement(
@@ -105,14 +105,14 @@ public class CarManagerImpl implements CarManager {
             } catch (SQLException ex) {
                 connection.rollback();
                 String msg = "Error when updating "+ car +" in db";
-                logger.log(Level.SEVERE, msg, ex);
+                logger.error(msg, ex);
                 throw new ServiceFailureException(msg, ex);
             } finally {
                 connection.setAutoCommit(true);
             }
         } catch (SQLException ex) {
             String msg = "Error in getting connection when updating "+ car +" in db";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -126,6 +126,21 @@ public class CarManagerImpl implements CarManager {
             throw new IllegalArgumentException("car not in db or doesnt have id");
         }
         
+        CarRefuellingManagerImpl refuelMan = new CarRefuellingManagerImpl();
+        refuelMan.setDataSource(dataSource);
+        
+        FillUpManagerImpl fMan = new FillUpManagerImpl();
+        fMan.setDataSource(dataSource);
+        
+        logger.info("Deleting fillups of "+car+" in db");
+        
+        List<FillUp> fillUps = refuelMan.findFillUpsOfCar(car);
+        for(FillUp fUp : fillUps){
+            fMan.deleteFillUp(fUp);
+        }
+        
+        
+        logger.info("Deleting "+car+"in db");
         try (Connection connection = dataSource.getConnection()) {
             
             try (PreparedStatement st = connection.prepareStatement("DELETE FROM Car WHERE id = ?")) {
@@ -142,14 +157,14 @@ public class CarManagerImpl implements CarManager {
             } catch (SQLException ex) {
                 connection.rollback();
                 String msg = "Error when deleting "+ car +" from the db";
-                logger.log(Level.SEVERE, msg, ex);
+                logger.error(msg, ex);
                 throw new ServiceFailureException(msg, ex);
             } finally {
                 connection.setAutoCommit(true);
             }
         } catch (SQLException ex) {
             String msg = "Error in getting connection when deleting "+ car +" from the db";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -162,7 +177,7 @@ public class CarManagerImpl implements CarManager {
         if (carId == null) {
             throw new IllegalArgumentException("id of car is null");
         }
-        
+        logger.info("Finding car id "+carId+" in db");
         try (Connection connection = dataSource.getConnection()) {
             
             try (PreparedStatement st = connection.prepareStatement(
@@ -173,7 +188,7 @@ public class CarManagerImpl implements CarManager {
             
         } catch (SQLException ex) {
             String msg = "Error when getting car with id = " + carId + " from DB";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -182,6 +197,9 @@ public class CarManagerImpl implements CarManager {
     public List<Car> findAllCars() {
         
         checkDataSource();
+        
+        logger.info("Finding all cars in db");
+        
         try (Connection connection = dataSource.getConnection()) {
             
             try (PreparedStatement st = connection.prepareStatement(
@@ -190,7 +208,7 @@ public class CarManagerImpl implements CarManager {
             }
         } catch (SQLException ex) {
             String msg = "Error when getting all car from DB";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -244,6 +262,9 @@ public class CarManagerImpl implements CarManager {
     }
     
     private static Car rowToCar(ResultSet rs) throws SQLException {
+       
+        logger.info("Getting car from result set");
+        
         Car result = new Car();
         result.setId(rs.getLong("id"));
         result.setManufacturerName(rs.getString("manufacturer"));
@@ -255,6 +276,7 @@ public class CarManagerImpl implements CarManager {
     
     private void checkDataSource() {
         if (dataSource == null) {
+            logger.debug("data source check failed");
             throw new IllegalStateException("DataSource not set");
         }
     }

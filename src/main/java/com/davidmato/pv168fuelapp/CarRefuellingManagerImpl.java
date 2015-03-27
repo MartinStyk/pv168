@@ -1,6 +1,5 @@
 package com.davidmato.pv168fuelapp;
 
-
 import common.ServiceFailureException;
 import common.FuelConsumptionException;
 import java.sql.Connection;
@@ -10,16 +9,15 @@ import java.util.ArrayList;
 import com.davidmato.pv168fuelapp.entity.FillUp;
 
 import com.davidmato.pv168fuelapp.entity.Car;
+import common.ValidationException;
 import java.sql.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.sql.DataSource;
+import org.slf4j.LoggerFactory;
 
 public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
-    private static final Logger logger = Logger.getLogger(
-            CarRefuellingManagerImpl.class.getName());
+    private final static org.slf4j.Logger logger = LoggerFactory.getLogger(FillUpManagerImpl.class);
 
     private DataSource dataSource;
 
@@ -43,6 +41,8 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
             throw new IllegalArgumentException("car id is null");
         }
 
+        logger.info("finding all fillups of " + car);
+
         try (Connection connection = dataSource.getConnection()) {
             try (PreparedStatement st = connection.prepareStatement(
                     "SELECT fillup.id, carid, date, litres, distance "
@@ -56,7 +56,7 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
         } catch (SQLException ex) {
             String msg = "Error when trying to find fillups of car " + car;
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
 
@@ -66,9 +66,16 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
     public List<FillUp> findFillUpsOfCar(Car car, Date from, Date to) {
         List<FillUp> fillUps = findFillUpsOfCar(car);
         List<FillUp> result = new ArrayList<>();
-       
+
+        if (from.after(to)) {
+            logger.warn(from + " is after " + to);
+            throw new ValidationException(from + " is after " + to);
+        }
+
+        logger.info("filter only fillups in time range");
+
         for (FillUp entry : fillUps) {
-            if(entry.getDate().after(from) && entry.getDate().before(to) ){
+            if (entry.getDate().after(from) && entry.getDate().before(to)) {
                 result.add(entry);
             }
         }
@@ -77,13 +84,25 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
     @Override
     public Car findCarWithFillUp(FillUp fillUp) {
-        return fillUp.getFilledCar();
+        Car carFromFillUp = fillUp.getFilledCar();
+
+        try {
+            CarManagerImpl cMan = new CarManagerImpl();
+            cMan.setDataSource(dataSource);
+            return cMan.findCarById(carFromFillUp.getId());
+        } catch (ServiceFailureException e) {
+            logger.error("error getting "+ carFromFillUp +" from fillup "+ fillUp+ "from db");
+            throw new ServiceFailureException("error getting "+ carFromFillUp +" from fillup "+ fillUp+ "from db",e);
+        } catch(IllegalArgumentException e){
+            logger.error("error "+fillUp.getFilledCar()+" not in db");
+            throw new IllegalArgumentException("error getting "+ carFromFillUp +" from fillup "+ fillUp+ "from db",e);            
+        }
     }
 
     @Override
     public Double getCarAverageFuelConsumption(Car car) throws FuelConsumptionException {
         List<FillUp> fillUps = findFillUpsOfCar(car);
-        if(fillUps == null || fillUps.size() < 5){
+        if (fillUps == null || fillUps.size() < 5) {
             throw new FuelConsumptionException("not enough fillups to compute consumption");
         }
         double totalLitres = 0;
@@ -92,7 +111,7 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
             totalDistance += fillUp.getDistanceFromLastFillUp();
             totalLitres += fillUp.getLitresFilled();
         }
-        return totalLitres / (totalDistance/100);
+        return (100*totalLitres) / (totalDistance);
     }
 
 }

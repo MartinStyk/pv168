@@ -12,14 +12,12 @@ import java.util.ArrayList;
 import com.davidmato.pv168fuelapp.entity.FillUp;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.sql.DataSource;
+import org.slf4j.LoggerFactory;
 
 public class FillUpManagerImpl implements FillUpManager {
 
-    private static final Logger logger = Logger.getLogger(
-            CarManagerImpl.class.getName());
+    private final static org.slf4j.Logger logger = LoggerFactory.getLogger(FillUpManagerImpl.class);
 
     private DataSource dataSource;
 
@@ -35,6 +33,8 @@ public class FillUpManagerImpl implements FillUpManager {
             throw new IllegalArgumentException("id of fillUp is already set");
         }
 
+        logger.info("adding "+ fillUp+ "in db");
+        
         try (Connection connection = dataSource.getConnection()) {
 
             try (PreparedStatement st = connection.prepareStatement(
@@ -56,14 +56,14 @@ public class FillUpManagerImpl implements FillUpManager {
             } catch (SQLException ex) {
                 connection.rollback();
                 String msg = "Error when inserting "+ fillUp +" into db";
-                logger.log(Level.SEVERE, msg, ex);
+                logger.error( msg, ex);
                 throw new ServiceFailureException(msg, ex);
             } finally {
                 connection.setAutoCommit(true);
             }
         } catch (SQLException ex) {
             String msg = "Error in getting connection while inserting "+fillUp+" into db" ;
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error( msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
 
@@ -77,6 +77,8 @@ public class FillUpManagerImpl implements FillUpManager {
             throw new IllegalArgumentException("id of fill up is not set");
         }
 
+        logger.info("updating "+ fillUp+ "in db");
+        
         try (Connection connection = dataSource.getConnection()) {
 
             try (PreparedStatement st = connection.prepareStatement(
@@ -97,14 +99,14 @@ public class FillUpManagerImpl implements FillUpManager {
             }catch (SQLException ex) {
                 connection.rollback();
                 String msg = "Error when updating fillup in db";
-                logger.log(Level.SEVERE, msg, ex);
+                logger.error( msg, ex);
                 throw new ServiceFailureException(msg, ex);
             } finally {
                 connection.setAutoCommit(true);
             }
         } catch (SQLException ex) {
             String msg = "Error in getting connection while updating "+fillUp+" into db" ;
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error( msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -117,6 +119,8 @@ public class FillUpManagerImpl implements FillUpManager {
             throw new IllegalArgumentException("id is null");
         }
 
+        logger.info("deleting "+ fillUp+ "in db");
+        
         try (Connection connection = dataSource.getConnection()) {
 
             try (PreparedStatement st = connection.prepareStatement("DELETE FROM FillUp WHERE id = ?")) {
@@ -133,14 +137,14 @@ public class FillUpManagerImpl implements FillUpManager {
             }catch (SQLException ex) {
                 connection.rollback();
                 String msg = "Error when deleting fillup from the db";
-                logger.log(Level.SEVERE, msg, ex);
+                logger.error( msg, ex);
                 throw new ServiceFailureException(msg, ex);
             } finally {
                 connection.setAutoCommit(true);
             }
         } catch (SQLException ex) {
             String msg = "Error in getting connection";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error( msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -153,6 +157,8 @@ public class FillUpManagerImpl implements FillUpManager {
             throw new IllegalArgumentException("id of fill up is null");
         }
 
+        logger.info("finding fillup id "+ id +" in db");
+        
         try (Connection connection = dataSource.getConnection()) {
 
             try (PreparedStatement st = connection.prepareStatement(
@@ -163,7 +169,7 @@ public class FillUpManagerImpl implements FillUpManager {
 
         } catch (SQLException ex) {
             String msg = "Error when getting fill up id" + id+" from DB";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error( msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -171,6 +177,9 @@ public class FillUpManagerImpl implements FillUpManager {
     @Override
     public List<FillUp> findAllFillUps() {
         checkDataSource();
+        
+        logger.info("finding all fill ups in db");
+        
         try (Connection connection = dataSource.getConnection()) {
 
             try (PreparedStatement st = connection.prepareStatement(
@@ -179,7 +188,7 @@ public class FillUpManagerImpl implements FillUpManager {
             }
         } catch (SQLException ex) {
             String msg = "Error when getting all fillups from DB";
-            logger.log(Level.SEVERE, msg, ex);
+            logger.error( msg, ex);
             throw new ServiceFailureException(msg, ex);
         }
     }
@@ -245,6 +254,7 @@ public class FillUpManagerImpl implements FillUpManager {
 
     private void checkDataSource() {
         if (dataSource == null) {
+            logger.debug("data source check failed");
             throw new IllegalStateException("DataSource not set");
         }
     }
