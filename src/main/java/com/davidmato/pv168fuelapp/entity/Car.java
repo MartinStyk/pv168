@@ -69,7 +69,7 @@ public class Car {
 
         return Objects.equals(this.id, other.id);
     }
-
+    
     @Override
     public String toString() {
         return String.format("Car id= %d ; manufacturer = %s , cartype = %s", id, manufacturerName, typeName);
