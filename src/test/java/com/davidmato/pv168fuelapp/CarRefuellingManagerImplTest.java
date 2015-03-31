@@ -7,7 +7,6 @@ import com.davidmato.pv168fuelapp.entity.FillUp;
 import common.DBHelper;
 import common.FuelConsumptionException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.sql.Date;
@@ -76,7 +75,6 @@ public class CarRefuellingManagerImplTest {
         assertEquals(expected, actual);
     }
 
-    ;
     @Test
     public void findFillUpsOfCarInTimeRangeTest() {
         Car car = CarManagerImplTest.newCar("Skoda", "Octavia", CarType.ESTATE, FuelType.PETROL);
@@ -104,7 +102,6 @@ public class CarRefuellingManagerImplTest {
         assertEquals(expected, actual);
     }
 
-    ;
     @Test
     public void findFillUpsOfCarInTimeRangeTest_wrongDates() {
         Car car = CarManagerImplTest.newCar("Skoda", "Octavia", CarType.ESTATE, FuelType.PETROL);
@@ -115,7 +112,6 @@ public class CarRefuellingManagerImplTest {
 
     }
 
-    ;
     @Test
     public void findCarWithFillUp() {
         Car car = CarManagerImplTest.newCar("Skoda", "Octavia", CarType.ESTATE, FuelType.PETROL);
@@ -124,14 +120,15 @@ public class CarRefuellingManagerImplTest {
         carManager.createCar(car2);
         FillUp fUp = FillUpManagerImplTest.newFillUp(new Date(1), 10, 100, car);
         fillManager.createFillUp(fUp);
-        
+
         Car resultCar = refuelManager.findCarWithFillUp(fUp);
-        
+
         assertEquals(car, resultCar);
         assertNotSame(car, resultCar);
         CarManagerImplTest.assertDeepEquals(car, resultCar);
     }
-     @Test
+
+    @Test
     public void getCarAverageFuelConsumption() throws FuelConsumptionException {
         Car car = CarManagerImplTest.newCar("Skoda", "Octavia", CarType.ESTATE, FuelType.PETROL);
         carManager.createCar(car);
@@ -145,21 +142,22 @@ public class CarRefuellingManagerImplTest {
         fillManager.createFillUp(fUp);
         fUp = FillUpManagerImplTest.newFillUp(new Date(1), 80, 1000, car);
         fillManager.createFillUp(fUp);
-        
+
         double consumption = refuelManager.getCarAverageFuelConsumption(car);
-        
-         assertEquals( 5.83  , consumption, 0.05);
+
+        assertEquals(5.83, consumption, 0.05);
     }
-     @Test
+
+    @Test
     public void getCarAverageFuelConsumption_notEnaughData() throws FuelConsumptionException {
         Car car = CarManagerImplTest.newCar("Skoda", "Octavia", CarType.ESTATE, FuelType.PETROL);
         carManager.createCar(car);
         FillUp fUp = FillUpManagerImplTest.newFillUp(new Date(1), 10, 100, car);
         fillManager.createFillUp(fUp);
-       
+
         expExcpetion.expect(common.FuelConsumptionException.class);
-        
+
         double consumption = refuelManager.getCarAverageFuelConsumption(car);
-        
+
     }
 }

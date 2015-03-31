@@ -1,9 +1,8 @@
 package common;
 
-
 /**
  * This exception indicates service failure.
- *  
+ *
  * @author Petr Adamek
  */
 public class ServiceFailureException extends RuntimeException {

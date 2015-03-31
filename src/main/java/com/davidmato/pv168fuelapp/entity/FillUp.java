@@ -4,43 +4,52 @@ import java.sql.Date;
 import java.util.Objects;
 
 public class FillUp {
-	
-	private Long id;
-	private Date date;
-	private Car filledCar;
-	private double litresFilled;
-	private double distanceFromLastFillUp;
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public Car getFilledCar() {
-		return filledCar;
-	}
-	public void setFilledCar(Car filledCar) {
-		this.filledCar = filledCar;
-	}
-	public double getLitresFilled() {
-		return litresFilled;
-	}
-	public void setLitresFilled(double litresFilled) {
-		this.litresFilled = litresFilled;
-	}
-	public double getDistanceFromLastFillUp() {
-		return distanceFromLastFillUp;
-	}
-	public void setDistanceFromLastFillUp(double distanceFromLastFillUp) {
-		this.distanceFromLastFillUp = distanceFromLastFillUp;
-	}
+
+    private Long id;
+    private Date date;
+    private Car filledCar;
+    private double litresFilled;
+    private double distanceFromLastFillUp;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Car getFilledCar() {
+        return filledCar;
+    }
+
+    public void setFilledCar(Car filledCar) {
+        this.filledCar = filledCar;
+    }
+
+    public double getLitresFilled() {
+        return litresFilled;
+    }
+
+    public void setLitresFilled(double litresFilled) {
+        this.litresFilled = litresFilled;
+    }
+
+    public double getDistanceFromLastFillUp() {
+        return distanceFromLastFillUp;
+    }
+
+    public void setDistanceFromLastFillUp(double distanceFromLastFillUp) {
+        this.distanceFromLastFillUp = distanceFromLastFillUp;
+    }
 
     @Override
     public int hashCode() {
@@ -63,9 +72,10 @@ public class FillUp {
         }
         return true;
     }
-    public String toString(){
-            return String.format("FillUp id= %d ; of car = %s ", id, filledCar);
-        }
-        
+
+    @Override
+    public String toString() {
+        return String.format("FillUp id= %d ; of car = %s ", id, filledCar);
+    }
 
 }

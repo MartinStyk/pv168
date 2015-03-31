@@ -1,8 +1,9 @@
-package common ;
+package common;
+
 /**
- * This exception is thrown when you try to use an entity that can not be 
- * used for the operation.
- * 
+ * This exception is thrown when you try to use an entity that can not be used
+ * for the operation.
+ *
  * @author Petr Adámek
  */
 class IllegalEntityException extends RuntimeException {
@@ -17,5 +18,5 @@ class IllegalEntityException extends RuntimeException {
     public IllegalEntityException(String message, Throwable cause) {
         super(message, cause);
     }
-        
+
 }

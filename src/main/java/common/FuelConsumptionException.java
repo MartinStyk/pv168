@@ -9,15 +9,17 @@ package common;
  *
  * @author Martin Styk
  */
-public class FuelConsumptionException extends Exception{
-    
-    public FuelConsumptionException(){
+public class FuelConsumptionException extends Exception {
+
+    public FuelConsumptionException() {
         super();
     }
-    public FuelConsumptionException(String msg){
+
+    public FuelConsumptionException(String msg) {
         super(msg);
     }
-    public FuelConsumptionException(String msg, Throwable cause){
-        super(msg,cause);
+
+    public FuelConsumptionException(String msg, Throwable cause) {
+        super(msg, cause);
     }
 }

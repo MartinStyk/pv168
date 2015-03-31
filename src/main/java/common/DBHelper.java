@@ -5,7 +5,6 @@
  */
 package common;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,39 +13,30 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  *
  * @author Martin Styk
  */
 public class DBHelper {
 
-    private static final Logger logger = Logger.getLogger(
-            DBHelper.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(DBHelper.class);
 
-    public static DataSource getDataSource()  {
-   
-             BasicDataSource ds = new BasicDataSource();
+    public static DataSource getDataSource() {
 
-             ds.setUrl("jdbc:derby://localhost:1527/pv168");
-            ds.setUsername("davidmato");
-            ds.setPassword("matodavid");
-            
-            return ds;
+        BasicDataSource ds = new BasicDataSource();
+
+        ds.setUrl("jdbc:derby://localhost:1527/pv168");
+        ds.setUsername("davidmato");
+        ds.setPassword("matodavid");
+
+        return ds;
     }
-    
-    /**
-     * Executes SQL script.
-     * 
-     * @param ds datasource
-     * @param scriptUrl url of sql script to be executed
-     * @throws SQLException when operation fails
-     */
-   
+
     /**
      * Executes SQL script.
      *
@@ -65,18 +55,19 @@ public class DBHelper {
             }
         }
     }
-        public static void executeSqlScript(DataSource ds, URL scriptUrl) throws SQLException {
-      
-        try (Connection conn = ds.getConnection()){
-           
+
+    public static void executeSqlScript(DataSource ds, URL scriptUrl) throws SQLException {
+
+        try (Connection conn = ds.getConnection()) {
+
             for (String sqlStatement : readSqlStatements(scriptUrl)) {
                 if (!sqlStatement.trim().isEmpty()) {
                     conn.prepareStatement(sqlStatement).executeUpdate();
                 }
             }
-        } 
+        }
     }
-        
+
     private static String[] readSqlStatements(URL url) {
         try {
             char buffer[] = new char[256];
@@ -94,9 +85,6 @@ public class DBHelper {
             throw new RuntimeException("Cannot read " + url, ex);
         }
     }
-
-
-
 
     /**
      * Extract key from given ResultSet.
@@ -120,12 +108,12 @@ public class DBHelper {
         }
     }
 
-        /**
+    /**
      * Reads SQL statements from file. SQL commands in file must be separated by
      * a semicolon.
      *
      * @param is input stream of the file
-     * @return array of command  strings
+     * @return array of command strings
      */
     private static String[] readSqlStatements(InputStream is) {
         try {

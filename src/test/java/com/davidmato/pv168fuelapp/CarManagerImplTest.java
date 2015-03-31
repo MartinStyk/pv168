@@ -2,10 +2,10 @@ package com.davidmato.pv168fuelapp;
 
 import common.ServiceFailureException;
 import java.sql.SQLException;
-import  com.davidmato.pv168fuelapp.entity.CarType;
-import  com.davidmato.pv168fuelapp.entity.FuelType;
-import  com.davidmato.pv168fuelapp.entity.Car;
-import   common.DBHelper;
+import com.davidmato.pv168fuelapp.entity.CarType;
+import com.davidmato.pv168fuelapp.entity.FuelType;
+import com.davidmato.pv168fuelapp.entity.Car;
+import common.DBHelper;
 import java.net.URL;
 import static org.junit.Assert.*;
 
@@ -20,28 +20,27 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-
 public class CarManagerImplTest {
 
     private CarManagerImpl manager;
 
     @Before
-    public void setUp() throws SQLException{
-       
+    public void setUp() throws SQLException {
+
         URL urlToScript = CarManagerImpl.class.getResource("/createTables.sql");
-        DBHelper.executeSqlScript(DBHelper.getDataSource(),urlToScript);
+        DBHelper.executeSqlScript(DBHelper.getDataSource(), urlToScript);
         manager = new CarManagerImpl();
         manager.setDataSource(DBHelper.getDataSource());
-    } 
+    }
 
     @After
     public void tearDown() throws SQLException {
         URL urlToScript = CarManagerImpl.class.getResource("/dropTables.sql");
-        DBHelper.executeSqlScript(DBHelper.getDataSource(),urlToScript);
+        DBHelper.executeSqlScript(DBHelper.getDataSource(), urlToScript);
     }
 
- @Rule
- public ExpectedException expException = ExpectedException.none();
+    @Rule
+    public ExpectedException expException = ExpectedException.none();
 
     @Test
     public void createCar() {
@@ -167,6 +166,7 @@ public class CarManagerImplTest {
 
     @Test
     public void updateCar() {
+        
         Car car1 = newCar("Skoda", "Favorit", CarType.HATCHBACK, FuelType.PETROL);
         Car car2 = newCar("Tatra", "V3S", CarType.VAN, FuelType.DIESEL);
         manager.createCar(car1);
@@ -324,6 +324,7 @@ public class CarManagerImplTest {
 
     @Test
     public void deleteNullIdCar() {
+        
         Car car = newCar("Skoda", "Superb", CarType.ESTATE, FuelType.CNG);
         manager.createCar(car);
         car.setId(null);
@@ -357,13 +358,12 @@ public class CarManagerImplTest {
         assertEquals(expected.getCarType(), actual.getCarType());
         assertEquals(expected.getFuelType(), actual.getFuelType());
     }
+    
     protected static Comparator<Car> idComparator = new Comparator<Car>() {
-
         @Override
         public int compare(Car o1, Car o2) {
             return o1.getId().compareTo(o2.getId());
         }
     };
-
 
 }

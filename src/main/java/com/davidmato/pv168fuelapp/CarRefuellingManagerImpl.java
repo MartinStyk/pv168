@@ -13,11 +13,12 @@ import common.ValidationException;
 import java.sql.Date;
 import java.util.List;
 import javax.sql.DataSource;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
-    private final static org.slf4j.Logger logger = LoggerFactory.getLogger(FillUpManagerImpl.class);
+    private final static Logger logger = LoggerFactory.getLogger(FillUpManagerImpl.class);
 
     private DataSource dataSource;
 
@@ -64,6 +65,8 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
     @Override
     public List<FillUp> findFillUpsOfCar(Car car, Date from, Date to) {
+        checkDataSource();
+        
         List<FillUp> fillUps = findFillUpsOfCar(car);
         List<FillUp> result = new ArrayList<>();
 
@@ -84,6 +87,8 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
     @Override
     public Car findCarWithFillUp(FillUp fillUp) {
+        checkDataSource();
+        
         Car carFromFillUp = fillUp.getFilledCar();
 
         try {
@@ -91,16 +96,18 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
             cMan.setDataSource(dataSource);
             return cMan.findCarById(carFromFillUp.getId());
         } catch (ServiceFailureException e) {
-            logger.error("error getting "+ carFromFillUp +" from fillup "+ fillUp+ "from db");
-            throw new ServiceFailureException("error getting "+ carFromFillUp +" from fillup "+ fillUp+ "from db",e);
-        } catch(IllegalArgumentException e){
-            logger.error("error "+fillUp.getFilledCar()+" not in db");
-            throw new IllegalArgumentException("error getting "+ carFromFillUp +" from fillup "+ fillUp+ "from db",e);            
+            logger.error("error getting " + carFromFillUp + " from fillup " + fillUp + "from db");
+            throw new ServiceFailureException("error getting " + carFromFillUp + " from fillup " + fillUp + "from db", e);
+        } catch (IllegalArgumentException e) {
+            logger.error("error " + fillUp.getFilledCar() + " not in db");
+            throw new IllegalArgumentException("error getting " + carFromFillUp + " from fillup " + fillUp + "from db", e);
         }
     }
 
     @Override
     public Double getCarAverageFuelConsumption(Car car) throws FuelConsumptionException {
+        checkDataSource();
+        
         List<FillUp> fillUps = findFillUpsOfCar(car);
         if (fillUps == null || fillUps.size() < 5) {
             throw new FuelConsumptionException("not enough fillups to compute consumption");
@@ -111,7 +118,7 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
             totalDistance += fillUp.getDistanceFromLastFillUp();
             totalLitres += fillUp.getLitresFilled();
         }
-        return (100*totalLitres) / (totalDistance);
+        return (100 * totalLitres) / (totalDistance);
     }
 
 }
