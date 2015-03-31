@@ -65,7 +65,6 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
     @Override
     public List<FillUp> findFillUpsOfCar(Car car, Date from, Date to) {
-        checkDataSource();
         
         List<FillUp> fillUps = findFillUpsOfCar(car);
         List<FillUp> result = new ArrayList<>();
@@ -106,7 +105,6 @@ public class CarRefuellingManagerImpl implements CarRefuellingManager {
 
     @Override
     public Double getCarAverageFuelConsumption(Car car) throws FuelConsumptionException {
-        checkDataSource();
         
         List<FillUp> fillUps = findFillUpsOfCar(car);
         if (fillUps == null || fillUps.size() < 5) {
