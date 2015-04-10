@@ -5,6 +5,8 @@
  */
 package common;
 
+import com.davidmato.pv168fuelapp.CarManager;
+import com.davidmato.pv168fuelapp.CarManagerImpl;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.slf4j.Logger;
@@ -28,11 +31,21 @@ public class DBHelper {
 
     public static DataSource getDataSource() {
 
+        
+        Properties prop = new Properties();
+        
+        try(InputStream input = DBHelper.class.getResourceAsStream("/config.PROPERTIES");){
+            prop.load(input);
+        }catch(IOException e){
+            logger.error("error reading properties", e);
+        }
+        
+        
         BasicDataSource ds = new BasicDataSource();
-
-        ds.setUrl("jdbc:derby://localhost:1527/pv168");
-        ds.setUsername("davidmato");
-        ds.setPassword("matodavid");
+       
+        ds.setUrl(prop.getProperty("dbUrl"));
+        ds.setUsername(prop.getProperty("dbUsername"));
+        ds.setPassword(prop.getProperty("dbPassword"));
 
         return ds;
     }
