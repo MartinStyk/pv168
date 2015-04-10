@@ -205,7 +205,7 @@ public class CarManagerImpl implements CarManager {
                 return getMultipleCarsFromQuery(st);
             }
         } catch (SQLException ex) {
-            String msg = "Error when getting all car from DB";
+            String msg = "Error when getting all cars from DB";
             logger.error(msg, ex);
             throw new ServiceFailureException(msg, ex);
         }

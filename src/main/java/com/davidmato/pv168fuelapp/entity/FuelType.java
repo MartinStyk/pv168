@@ -6,3 +6,4 @@ public enum FuelType {
 	CNG,
 	LPG
 }
+

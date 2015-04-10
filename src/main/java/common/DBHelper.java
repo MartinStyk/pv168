@@ -44,6 +44,7 @@ public class DBHelper {
         BasicDataSource ds = new BasicDataSource();
        
         ds.setUrl(prop.getProperty("dbUrl"));
+        ds.setDriverClassName("org.apache.derby.jdbc.ClientDriver");
         ds.setUsername(prop.getProperty("dbUsername"));
         ds.setPassword(prop.getProperty("dbPassword"));
 
