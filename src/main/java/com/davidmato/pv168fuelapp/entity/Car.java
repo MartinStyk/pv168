@@ -72,7 +72,7 @@ public class Car {
     
     @Override
     public String toString() {
-        return String.format("Car id= %d ; manufacturer = %s , cartype = %s", id, manufacturerName, typeName);
+        return String.format("Car id = %d ; manufacturer = %s , type = %s, cartype = %s, fueltype = %s", id, manufacturerName, typeName, carType, fuelType);
     }
 
 }

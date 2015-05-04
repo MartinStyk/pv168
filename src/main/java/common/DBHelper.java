@@ -31,18 +31,16 @@ public class DBHelper {
 
     public static DataSource getDataSource() {
 
-        
         Properties prop = new Properties();
-        
-        try(InputStream input = DBHelper.class.getResourceAsStream("/config.PROPERTIES");){
+
+        try (InputStream input = DBHelper.class.getResourceAsStream("/config.PROPERTIES");) {
             prop.load(input);
-        }catch(IOException e){
+        } catch (IOException e) {
             logger.error("error reading properties", e);
         }
-        
-        
+
         BasicDataSource ds = new BasicDataSource();
-       
+
         ds.setUrl(prop.getProperty("dbUrl"));
         ds.setDriverClassName("org.apache.derby.jdbc.ClientDriver");
         ds.setUsername(prop.getProperty("dbUsername"));

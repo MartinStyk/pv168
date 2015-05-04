@@ -198,10 +198,10 @@ public class FillUpManagerImpl implements FillUpManager {
             throw new IllegalArgumentException("fillUp is null");
         }
         if (fillUp.getFilledCar() == null) {
-            throw new IllegalArgumentException("filedcar is null");
+            throw new IllegalArgumentException("filledcar is null");
         }
         if (fillUp.getFilledCar().getId() == null) {
-            throw new IllegalArgumentException("filedcar is not in db or doesnt have id");
+            throw new IllegalArgumentException("filledcar is not in db or doesnt have id");
         }
         if (fillUp.getDate() == null) {
             throw new IllegalArgumentException("date is null");

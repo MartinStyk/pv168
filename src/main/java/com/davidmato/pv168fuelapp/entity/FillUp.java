@@ -75,7 +75,7 @@ public class FillUp {
 
     @Override
     public String toString() {
-        return String.format("FillUp id= %d ; of car = %s ", id, filledCar);
+        return String.format("FillUp id = %d ; date = %s, litres = %.2f, distance = %.2f; of carID = %d", id, date, litresFilled, distanceFromLastFillUp, filledCar.getId());
     }
 
 }
