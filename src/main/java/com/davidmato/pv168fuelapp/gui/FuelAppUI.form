@@ -6,35 +6,22 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="File"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="text.getString(&quot;file&quot;)" type="code"/>
+            </Property>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cars"/>
-              </Properties>
-            </Menu>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Q"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Quit"/>
-              </Properties>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Help"/>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="About"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="text.getString(&quot;quit&quot;)" type="code"/>
+                </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -120,7 +107,7 @@
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                      <EmptySpace pref="71" max="32767" attributes="0"/>
                       <Component id="jButtonQuit" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -130,12 +117,8 @@
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanel4">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Add a new car">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;add_new_car&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -211,7 +194,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Manufacturer Name:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;manufacturer_name&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextFieldManufacturerName">
@@ -221,14 +206,18 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Type Name:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;type_name&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextFieldTypeName">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Car Type:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;car_type&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxCarType">
@@ -243,7 +232,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Fuel Type:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;fuel_type&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxFuelType">
@@ -258,7 +249,9 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonCancelAddingCar">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Cancel"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;cancel&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelAddingCarActionPerformed"/>
@@ -266,7 +259,9 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonSaveCar">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Save"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;save&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSaveCarActionPerformed"/>
@@ -276,12 +271,8 @@
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel5">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Available cars">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;available_cars&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -296,7 +287,7 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jButtonRemoveCar" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane5" alignment="0" pref="570" max="32767" attributes="0"/>
+                              <Component id="jScrollPane5" alignment="0" pref="584" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -320,7 +311,9 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="jButtonRemoveCar">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Remove"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;remove&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRemoveCarActionPerformed"/>
@@ -377,14 +370,18 @@
                 </Container>
                 <Component class="javax.swing.JLabel" name="jLabel10">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Edit is possible due to table above."/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;edit_in_table&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="jButtonQuit">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Quit"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="text.getString(&quot;quit&quot;)" type="code"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonQuitActionPerformed"/>
@@ -425,7 +422,7 @@
                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                      <EmptySpace pref="78" max="32767" attributes="0"/>
                       <Component id="jButton14" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -435,12 +432,8 @@
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanel6">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Add a new fill up">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;add_new_fill_up&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -460,7 +453,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBoxCarToBeFilled" pref="198" max="32767" attributes="0"/>
+                                          <Component id="jComboBoxCarToBeFilled" pref="158" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -519,22 +512,30 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Date:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;date&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Volume:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;volume&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel7">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Distance:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;distance&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel8">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Car:"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;car&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxCarToBeFilled">
@@ -554,7 +555,9 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonSaveFillUp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Save"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;save&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSaveFillUpActionPerformed"/>
@@ -562,7 +565,9 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="jButtonCancelAddingFillUp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Cancel"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;cancel&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelAddingFillUpActionPerformed"/>
@@ -574,12 +579,8 @@
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel7">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Fill ups">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;fillups&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -589,7 +590,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jScrollPane6" pref="558" max="32767" attributes="0"/>
+                              <Component id="jScrollPane6" pref="572" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
@@ -618,7 +619,9 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="jButtonRemoveFillUp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Remove"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;remove&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRemoveFillUpActionPerformed"/>
@@ -675,14 +678,18 @@
                 </Container>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Edit is possible due to table above."/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="text.getString(&quot;edit_in_table&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="jButton14">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Quit"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="text.getString(&quot;quit&quot;)" type="code"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>
@@ -722,7 +729,7 @@
                               <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="40" max="32767" attributes="0"/>
+                              <EmptySpace pref="92" max="32767" attributes="0"/>
                               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -734,12 +741,8 @@
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanel8">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Cars">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;cars&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -749,7 +752,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane3" pref="257" max="32767" attributes="0"/>
+                              <Component id="jScrollPane3" pref="261" max="32767" attributes="0"/>
                               <Component id="jTextFieldSearchCar" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -801,12 +804,8 @@
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel9">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="FillUps">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;fillups&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -815,7 +814,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane4" pref="249" max="32767" attributes="0"/>
+                          <Component id="jScrollPane4" pref="269" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -856,12 +855,8 @@
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel10">
               <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Average Fuel Consumption">
-                      <Font PropertyName="font" name="Ubuntu" size="12" style="1"/>
-                    </TitledBorder>
-                  </Border>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="javax.swing.BorderFactory.createTitledBorder(null, text.getString(&quot;avg_consumption&quot;), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font(&quot;Ubuntu&quot;, 1, 12))" type="code"/>
                 </Property>
               </Properties>
 
@@ -869,7 +864,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="199" max="32767" attributes="0"/>
+                          <EmptySpace pref="211" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -895,7 +890,9 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Quit"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="text.getString(&quot;quit&quot;)" type="code"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>

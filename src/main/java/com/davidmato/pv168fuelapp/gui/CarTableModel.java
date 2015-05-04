@@ -11,6 +11,8 @@ import com.davidmato.pv168fuelapp.entity.CarType;
 import com.davidmato.pv168fuelapp.entity.FuelType;
 import common.DBHelper;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -20,6 +22,8 @@ import javax.swing.table.AbstractTableModel;
 class CarTableModel extends AbstractTableModel {
 
     private final CarManagerImpl carManager = new CarManagerImpl();
+    Locale defaultLocale = Locale.getDefault();
+    ResourceBundle text = ResourceBundle.getBundle("Text",defaultLocale);
 
     public CarTableModel() {
         carManager.setDataSource(DBHelper.getDataSource());
@@ -61,15 +65,15 @@ class CarTableModel extends AbstractTableModel {
     public String getColumnName(int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return "Manufacturer Name";
+                return text.getString("manufacturer_name");
             case 1:
-                return "Type Name";
+                return text.getString("type_name");
             case 2:
-                return "Car Type";
+                return text.getString("car_type");
             case 3:
-                return "Fuel Type";
+                return text.getString("fuel_type");
             case 4:
-                return "ID [just for check]";
+                return text.getString("id_check");
             default:
                 throw new IllegalArgumentException("columnIndex");
         }

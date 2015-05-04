@@ -13,6 +13,8 @@ import com.davidmato.pv168fuelapp.entity.FuelType;
 import common.DBHelper;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.DefaultCellEditor;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
@@ -25,7 +27,10 @@ import javax.swing.SwingUtilities;
  */
 public class FuelAppUI extends javax.swing.JFrame {
 
+    Locale defaultLocale = Locale.getDefault();
+    ResourceBundle text = ResourceBundle.getBundle("Text",defaultLocale);
     /**
+     * 
      * Creates new form FuelAppUI
      */
     public FuelAppUI() {
@@ -104,16 +109,13 @@ public class FuelAppUI extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Add a new car", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("add_new_car"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
-        jLabel1.setText("Manufacturer Name:");
+        jLabel1.setText(text.getString("manufacturer_name"));
 
         jTextFieldManufacturerName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,28 +123,28 @@ public class FuelAppUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Type Name:");
+        jLabel2.setText(text.getString("type_name"));
 
-        jLabel3.setText("Car Type:");
+        jLabel3.setText(text.getString("car_type"));
 
         jComboBoxCarType.setModel(new javax.swing.DefaultComboBoxModel(CarType.values()));
         jComboBoxCarType.insertItemAt(null, 0);
         jComboBoxCarType.setSelectedIndex(0);
 
-        jLabel4.setText("Fuel Type:");
+        jLabel4.setText(text.getString("fuel_type"));
 
         jComboBoxFuelType.setModel(new javax.swing.DefaultComboBoxModel(FuelType.values()));
         jComboBoxFuelType.insertItemAt(null, 0);
         jComboBoxFuelType.setSelectedIndex(0);
 
-        jButtonCancelAddingCar.setText("Cancel");
+        jButtonCancelAddingCar.setText(text.getString("cancel"));
         jButtonCancelAddingCar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelAddingCarActionPerformed(evt);
             }
         });
 
-        jButtonSaveCar.setText("Save");
+        jButtonSaveCar.setText(text.getString("save"));
         jButtonSaveCar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveCarActionPerformed(evt);
@@ -204,9 +206,9 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Available cars", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("available_cars"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
-        jButtonRemoveCar.setText("Remove");
+        jButtonRemoveCar.setText(text.getString("remove"));
         jButtonRemoveCar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRemoveCarActionPerformed(evt);
@@ -229,7 +231,7 @@ public class FuelAppUI extends javax.swing.JFrame {
 
         jScrollPane5.setViewportView(jScrollPane1);
 
-        jLabel10.setText("Edit is possible due to table above.");
+        jLabel10.setText(text.getString("edit_in_table"));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -242,7 +244,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonRemoveCar))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -257,7 +259,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButtonQuit.setText("Quit");
+        jButtonQuit.setText(text.getString("quit"));
         jButtonQuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonQuitActionPerformed(evt);
@@ -285,22 +287,22 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(jButtonQuit)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Car Options", jPanel1);
+        jTabbedPane1.addTab(text.getString("cars"), jPanel1);
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Add a new fill up", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("add_new_fill_up"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
-        jLabel5.setText("Date:");
+        jLabel5.setText(text.getString("date"));
 
-        jLabel6.setText("Volume:");
+        jLabel6.setText(text.getString("volume"));
 
-        jLabel7.setText("Distance:");
+        jLabel7.setText(text.getString("distance"));
 
-        jLabel8.setText("Car:");
+        jLabel8.setText(text.getString("car"));
 
         CarManagerImpl carManager = new CarManagerImpl();
         carManager.setDataSource(DBHelper.getDataSource());
@@ -313,14 +315,14 @@ public class FuelAppUI extends javax.swing.JFrame {
         jComboBoxCarToBeFilled.insertItemAt(null, 0);
         jComboBoxCarToBeFilled.setSelectedIndex(0);
 
-        jButtonSaveFillUp.setText("Save");
+        jButtonSaveFillUp.setText(text.getString("save"));
         jButtonSaveFillUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveFillUpActionPerformed(evt);
             }
         });
 
-        jButtonCancelAddingFillUp.setText("Cancel");
+        jButtonCancelAddingFillUp.setText(text.getString("cancel"));
         jButtonCancelAddingFillUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelAddingFillUpActionPerformed(evt);
@@ -343,7 +345,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBoxCarToBeFilled, 0, 198, Short.MAX_VALUE)))
+                                .addComponent(jComboBoxCarToBeFilled, 0, 158, Short.MAX_VALUE)))
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGap(36, 36, 36)
@@ -384,9 +386,9 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fill ups", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("fillups"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
-        jButtonRemoveFillUp.setText("Remove");
+        jButtonRemoveFillUp.setText(text.getString("remove"));
         jButtonRemoveFillUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRemoveFillUpActionPerformed(evt);
@@ -398,7 +400,7 @@ public class FuelAppUI extends javax.swing.JFrame {
 
         jScrollPane6.setViewportView(jScrollPane2);
 
-        jLabel11.setText("Edit is possible due to table above.");
+        jLabel11.setText(text.getString("edit_in_table"));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -407,7 +409,7 @@ public class FuelAppUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel11)
@@ -426,7 +428,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton14.setText("Quit");
+        jButton14.setText(text.getString("quit"));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -449,14 +451,14 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addComponent(jButton14)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Fillup Options", jPanel2);
+        jTabbedPane1.addTab(text.getString("fillups"), jPanel2);
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cars", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("cars"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
         CarManagerImpl carManagerListOfCars = new CarManagerImpl();
         carManagerListOfCars.setDataSource(DBHelper.getDataSource());
@@ -487,7 +489,7 @@ public class FuelAppUI extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
                     .addComponent(jTextFieldSearchCar))
                 .addContainerGap())
         );
@@ -500,7 +502,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FillUps", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("fillups"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
         jListOfFillUps.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -515,7 +517,7 @@ public class FuelAppUI extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -525,7 +527,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Average Fuel Consumption", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12))); // NOI18N
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, text.getString("avg_consumption"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu", 1, 12)));
 
         jLabel9.setText("?? l/100km");
 
@@ -534,7 +536,7 @@ public class FuelAppUI extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(199, Short.MAX_VALUE)
+                .addContainerGap(211, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addContainerGap())
         );
@@ -546,7 +548,7 @@ public class FuelAppUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton2.setText("Quit");
+        jButton2.setText(text.getString("quit"));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -572,35 +574,25 @@ public class FuelAppUI extends javax.swing.JFrame {
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                         .addComponent(jButton2)))
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Records", jPanel3);
+        jTabbedPane1.addTab(text.getString("records"), jPanel3);
 
-        jMenu2.setText("File");
-
-        jMenu4.setText("Cars");
-        jMenu2.add(jMenu4);
+        jMenu2.setText(text.getString("file"));
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Quit");
+        jMenuItem1.setText(text.getString("quit"));
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem1);
 
         jMenuBar1.add(jMenu2);
-
-        jMenu5.setText("Help");
-
-        jMenuItem2.setText("About");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem2);
-
-        jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
 
@@ -623,10 +615,6 @@ public class FuelAppUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jTextFieldManufacturerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldManufacturerNameActionPerformed
         // TODO add your handling code here:
@@ -715,6 +703,10 @@ public class FuelAppUI extends javax.swing.JFrame {
         model.removeRow(row);
     }//GEN-LAST:event_jButtonRemoveFillUpActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -779,11 +771,8 @@ public class FuelAppUI extends javax.swing.JFrame {
     private javax.swing.JList jListOfCars;
     private javax.swing.JList jListOfFillUps;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;

@@ -11,6 +11,8 @@ import com.davidmato.pv168fuelapp.entity.FillUp;
 import common.DBHelper;
 import java.sql.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -20,6 +22,8 @@ import javax.swing.table.AbstractTableModel;
 class FillUpTableModel extends AbstractTableModel {
 
     private final FillUpManagerImpl fillupManager = new FillUpManagerImpl();
+    Locale defaultLocale = Locale.getDefault();
+    ResourceBundle text = ResourceBundle.getBundle("Text",defaultLocale);
     
     public FillUpTableModel() {
         fillupManager.setDataSource(DBHelper.getDataSource());
@@ -60,15 +64,15 @@ class FillUpTableModel extends AbstractTableModel {
     public String getColumnName(int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return "Date";
+                return   text.getString("date");
             case 1:
-                return "Filled Car";
+                return text.getString("filled_car");
             case 2:
-                return "Litres Filled";
+                return text.getString("litres_filled");
             case 3:
-                return "Distance From Last Fillup";
+                return text.getString("distance_from_last_fillup");
             case 4:
-                return "ID [just for check]";
+                return text.getString("id_check");
             default:
                 throw new IllegalArgumentException("columnIndex");
         }
