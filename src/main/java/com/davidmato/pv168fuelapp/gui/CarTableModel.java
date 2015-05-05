@@ -23,7 +23,7 @@ class CarTableModel extends AbstractTableModel {
 
     private final CarManagerImpl carManager = new CarManagerImpl();
     Locale defaultLocale = Locale.getDefault();
-    ResourceBundle text = ResourceBundle.getBundle("Text",defaultLocale);
+    ResourceBundle text = ResourceBundle.getBundle("Text", defaultLocale);
 
     public CarTableModel() {
         carManager.setDataSource(DBHelper.getDataSource());
@@ -148,15 +148,6 @@ class CarTableModel extends AbstractTableModel {
     }
 
     public void removeCar(Car car) {
-        int firstRow = -1;
-        int lastRow = -1;
-        fireTableRowsDeleted(firstRow, lastRow);
-    }
-
-    public void removeRow(int row) {
-        List<Car> cars = carManager.findAllCars();
-        Car car = cars.get(row);
-
         carManager.deleteCar(car);
         int lastRow = carManager.findAllCars().size() - 1;
         fireTableRowsDeleted(lastRow, lastRow);
