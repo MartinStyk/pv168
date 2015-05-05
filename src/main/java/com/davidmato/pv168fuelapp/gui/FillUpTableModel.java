@@ -103,7 +103,8 @@ class FillUpTableModel extends AbstractTableModel {
 
         switch (columnIndex) {
             case 0:
-                fillup.setDate((Date) aValue);
+                java.util.Date utilDate = (java.util.Date) aValue;
+                fillup.setDate(new java.sql.Date(utilDate.getTime()));
                 break;
             case 1:
                 fillup.setFilledCar((Car) aValue);
@@ -142,7 +143,6 @@ class FillUpTableModel extends AbstractTableModel {
         }
         fillupManager.createFillUp(fillUp);
 
-        //fireTableRowsInserted(0, cars.size());
         int lastRow = fillupManager.findAllFillUps().size() - 1;
         fireTableRowsInserted(lastRow, lastRow);
     }

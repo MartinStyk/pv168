@@ -13,6 +13,7 @@ import com.davidmato.pv168fuelapp.entity.FillUp;
 import com.davidmato.pv168fuelapp.entity.FuelType;
 import common.DBHelper;
 import common.FuelConsumptionException;
+import java.awt.Component;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -21,10 +22,24 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableCellRenderer;
+import org.jdesktop.swingx.table.DatePickerCellEditor;
 import org.slf4j.LoggerFactory;
+
+//TODO
+//hlasky (message dialog) len pri chybe a s uzivatelsky pochopitelnym textom
+//logovanie do suboru
+//swingworker
+//spravne poodchytavat vynimky
+//search box na zachytavanie stlacenych klaves
+
+//BUGs
+//edit tabuliek -> nasledny update comboboxov, listov a pod.
+//pridanie do enumu (fuel type) causes error
 
 /**
  *
@@ -358,13 +373,18 @@ public class FuelAppUI extends javax.swing.JFrame {
         CarManagerImpl carManager = new CarManagerImpl();
         carManager.setDataSource(DBHelper.getDataSource());
         List<Car> cars = carManager.findAllCars();
-        String[] items = new String[cars.size()];
-        for (int i = 0; i < cars.size(); i++) {
-            items[i] = cars.get(i).toString();
-        }
-        jComboBoxCarToBeFilled.setModel(new javax.swing.DefaultComboBoxModel(items));
+        //String[] items = new String[cars.size()];
+        //for (int i = 0; i < cars.size(); i++) {
+            //    items[i] = cars.get(i).toString();
+            //}
+        jComboBoxCarToBeFilled.setModel(new javax.swing.DefaultComboBoxModel(cars.toArray()));
         jComboBoxCarToBeFilled.insertItemAt(null, 0);
         jComboBoxCarToBeFilled.setSelectedIndex(0);
+        jComboBoxCarToBeFilled.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxCarToBeFilledActionPerformed(evt);
+            }
+        });
 
         jButtonSaveFillUp.setText(text.getString("save"));
         jButtonSaveFillUp.addActionListener(new java.awt.event.ActionListener() {
@@ -447,6 +467,16 @@ public class FuelAppUI extends javax.swing.JFrame {
         });
 
         jTableFillUps.setModel(new FillUpTableModel());
+        //jTableFillUps.setDefaultRenderer(Car.class, new CarCellRenderer());
+        jTableFillUps.getColumnModel().getColumn(0).setCellEditor(new DatePickerCellEditor());
+
+        //CarManagerImpl carManager = new CarManagerImpl();
+        //carManager.setDataSource(DBHelper.getDataSource());
+        //List<Car> cars = carManager.findAllCars();
+
+        JComboBox editFilledCar = new JComboBox(new DefaultComboBoxModel(cars.toArray()));
+
+        jTableFillUps.getColumnModel().getColumn(1).setCellEditor(new DefaultCellEditor(editFilledCar));
         jScrollPane2.setViewportView(jTableFillUps);
 
         jScrollPane6.setViewportView(jScrollPane2);
@@ -523,6 +553,11 @@ public class FuelAppUI extends javax.swing.JFrame {
         jTextFieldSearchCar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldSearchCarActionPerformed(evt);
+            }
+        });
+        jTextFieldSearchCar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldSearchCarKeyTyped(evt);
             }
         });
 
@@ -717,7 +752,6 @@ public class FuelAppUI extends javax.swing.JFrame {
             DefaultComboBoxModel comboModel = (DefaultComboBoxModel) jComboBoxCarToBeFilled.getModel();
             comboModel.addElement(car.toString());
 
-            JOptionPane.showMessageDialog(null, car.toString() + " was successfully added to database!", "Success", JOptionPane.INFORMATION_MESSAGE);
             jButtonCancelAddingCarActionPerformed(null);
         } catch (IllegalArgumentException ex) {
             String msg = "Error when inserting " + car + " into db";
@@ -757,8 +791,8 @@ public class FuelAppUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Set the date, please!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        String carToString = (String) jComboBoxCarToBeFilled.getSelectedItem();
-        Long idNumberLong = parseCarID(carToString);
+        Car filledCar = (Car) jComboBoxCarToBeFilled.getSelectedItem();
+        Long idNumberLong = filledCar.getId();
 
         Car car = carManager.findCarById(idNumberLong);
         fillUp.setFilledCar(car);
@@ -774,12 +808,11 @@ public class FuelAppUI extends javax.swing.JFrame {
         FillUpTableModel model = (FillUpTableModel) jTableFillUps.getModel();
         try {
             model.addFillUp(fillUp);
-            JOptionPane.showMessageDialog(null, fillUp.toString() + " was successfully added to database!", "Success", JOptionPane.INFORMATION_MESSAGE);
             jButtonCancelAddingFillUpActionPerformed(null);
         } catch (IllegalArgumentException ex) {
             String msg = "Error when inserting " + fillUp + " into db";
             logger.error(msg, ex);
-            JOptionPane.showMessageDialog(null, ex, "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, msg, "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonSaveFillUpActionPerformed
 
@@ -808,24 +841,13 @@ public class FuelAppUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButtonQuit3ActionPerformed
 
-    private Long parseCarID(String carToString) {
+    private void jComboBoxCarToBeFilledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCarToBeFilledActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxCarToBeFilledActionPerformed
 
-        if (carToString == null) {
-            logger.error("Car was not set");
-            JOptionPane.showMessageDialog(null, "Choose your car, please!", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-
-        String delim1 = ";";
-        String[] carIdString = carToString.split(delim1);
-        String delim2 = "=";
-        String[] idNumberToken = carIdString[0].split(delim2);
-
-        String idNumberString = idNumberToken[1].trim();
-
-        Long idNumberLong = Long.parseLong(idNumberString);
-
-        return idNumberLong;
-    }
+    private void jTextFieldSearchCarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchCarKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSearchCarKeyTyped
 
     /**
      * @param args the command line arguments
@@ -920,4 +942,19 @@ public class FuelAppUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldTypeName;
     private org.jdesktop.swingx.JXDatePicker jXDatePickerFillUpDate;
     // End of variables declaration//GEN-END:variables
+
+    public class CarCellRenderer extends DefaultTableCellRenderer {
+
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value,
+                boolean isSelected, boolean hasFocus, int row, int column) {
+
+            super.getTableCellRendererComponent(table, value, isSelected,
+                    hasFocus, row, column);
+
+            return this;
+        }
+
+    }
+
 }

@@ -142,7 +142,6 @@ class CarTableModel extends AbstractTableModel {
         }
         carManager.createCar(car);
 
-        //fireTableRowsInserted(0, cars.size());
         int lastRow = carManager.findAllCars().size() - 1;
         fireTableRowsInserted(lastRow, lastRow);
     }
