@@ -32,11 +32,17 @@
             <artifactId>derbyclient</artifactId>
             <version>10.11.1.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.4</version>
-        </dependency>
+         <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.7.5</version>
+    </dependency>
+
         <dependency>
             <groupId>unknown.binary</groupId>
             <artifactId>swingx-all-1.6.4</artifactId>
