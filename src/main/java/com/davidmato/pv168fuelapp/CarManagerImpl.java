@@ -211,7 +211,7 @@ public class CarManagerImpl implements CarManager {
         }
     }
 
-    private void checkCar(Car car) {
+    public void checkCar(Car car) {
         if (car == null) {
             throw new IllegalArgumentException("car is null");
         }

@@ -193,7 +193,7 @@ public class FillUpManagerImpl implements FillUpManager {
         }
     }
 
-    private void checkFillUp(FillUp fillUp) {
+    public void checkFillUp(FillUp fillUp) {
         if (fillUp == null) {
             throw new IllegalArgumentException("fillUp is null");
         }

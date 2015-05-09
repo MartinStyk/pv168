@@ -13,6 +13,7 @@ import common.DBHelper;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.swing.SwingWorker;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -22,6 +23,7 @@ import javax.swing.table.AbstractTableModel;
 class CarTableModel extends AbstractTableModel {
 
     private final CarManagerImpl carManager = new CarManagerImpl();
+
     Locale defaultLocale = Locale.getDefault();
     ResourceBundle text = ResourceBundle.getBundle("Text", defaultLocale);
 
@@ -31,7 +33,7 @@ class CarTableModel extends AbstractTableModel {
 
     @Override
     public int getRowCount() {
-        return carManager.findAllCars().size();
+        return carManager.findAllCars() != null ? carManager.findAllCars().size() : 0;
     }
 
     @Override
@@ -97,28 +99,40 @@ class CarTableModel extends AbstractTableModel {
     }
 
     @Override
-    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+    public void setValueAt(final Object aValue, final int rowIndex, final int columnIndex) {
         List<Car> cars = carManager.findAllCars();
-        Car car = cars.get(rowIndex);
+        final Car car = cars.get(rowIndex);
 
-        switch (columnIndex) {
-            case 0:
-                car.setManufacturerName((String) aValue);
-                break;
-            case 1:
-                car.setTypeName((String) aValue);
-                break;
-            case 2:
-                car.setCarType((CarType) aValue);
-                break;
-            case 3:
-                car.setFuelType((FuelType) aValue);
-                break;
-            default:
-                throw new IllegalArgumentException("columnIndex");
-        }
-        carManager.updateCar(car);
-        fireTableCellUpdated(rowIndex, columnIndex);
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                switch (columnIndex) {
+                    case 0:
+                        car.setManufacturerName((String) aValue);
+                        break;
+                    case 1:
+                        car.setTypeName((String) aValue);
+                        break;
+                    case 2:
+                        car.setCarType((CarType) aValue);
+                        break;
+                    case 3:
+                        car.setFuelType((FuelType) aValue);
+                        break;
+                    default:
+                        throw new IllegalArgumentException("columnIndex");
+                }
+                return null;
+            }
+
+            @Override
+            public void done() {
+                carManager.updateCar(car);
+                fireTableCellUpdated(rowIndex, columnIndex);
+            }
+
+        }.execute();
     }
 
     @Override
@@ -136,20 +150,43 @@ class CarTableModel extends AbstractTableModel {
         }
     }
 
-    public void addCar(Car car) {
-        if (car == null) {
-            throw new IllegalArgumentException("car");
-        }
-        carManager.createCar(car);
+    public void addCar(final Car car) {
 
-        int lastRow = carManager.findAllCars().size() - 1;
-        fireTableRowsInserted(lastRow, lastRow);
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                carManager.createCar(car);
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                int lastRow = carManager.findAllCars().size() - 1;
+                fireTableRowsInserted(lastRow, lastRow);
+            }
+
+        }.execute();
+
     }
 
-    public void removeCar(Car car) {
-        carManager.deleteCar(car);
-        int lastRow = carManager.findAllCars().size() - 1;
-        fireTableRowsDeleted(lastRow, lastRow);
+    public void removeCar(final Car car) {
+
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                carManager.deleteCar(car);
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                int lastRow = carManager.findAllCars().size() - 1;
+                fireTableRowsDeleted(lastRow, lastRow);
+            }
+        }.execute();
+
     }
 
 }

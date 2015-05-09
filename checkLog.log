@@ -1,347 +1,202 @@
-20:32:53,368  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,587  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,603  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,759  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,774  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,774  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,774  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,774  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,774  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,774  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,774  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,774  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,790  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,790  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,790  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,790  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,790  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,790  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,790  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,806  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,806  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,806  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,806  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,821  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,821  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,821  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,821  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,821  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,821  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,821  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,821  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,837  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,837  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,837  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,837  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,837  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,837  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,837  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,837  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,868  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,884  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,884  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,884  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,899  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,899  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,899  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:53,915  INFO FuelAppUI:65 - all components initialized
-   20:32:53,915  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,931  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,931  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,931  INFO FuelAppUI:112 - init complete
-   20:32:53,993  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:53,993  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,993  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:53,993  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,009  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,024  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,040  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,056  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,056  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,056  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,056  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,056  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,056  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,056  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:199 - Finding all cars in db
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,071  INFO CarManagerImpl:264 - Getting car from result set
-   20:32:54,087  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:54,087  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:54,087  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:32:54,087  INFO FillUpManagerImpl:181 - finding all fill ups in db
-   20:33:02,597  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,613  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:02,629  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,098  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,102  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,102  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,102  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,106  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,106  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,106  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,110  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,110  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,110  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,114  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,114  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,114  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,118  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,118  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,118  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,122  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,137  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,137  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,137  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:04,137  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:04,137  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,018  INFO FuelAppUI:743 - adding car Car id = null ; manufacturer = dsadsadsa , type = dasdas, cartype = HATCHBACK, fueltype = DIESELinto db via jTable
-   20:33:09,018  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = dsadsadsa , type = dasdas, cartype = HATCHBACK, fueltype = DIESELin db
-   20:33:09,174  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,174  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,174  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,174  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,174  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,190  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,206  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,237  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,237  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,237  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,237  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,237  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,237  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,237  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,237  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,253  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,253  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,253  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,268  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,284  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,299  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,315  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,331  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,346  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,362  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,362  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,362  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,362  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,362  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,362  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,362  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,362  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:199 - Finding all cars in db
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
-   20:33:09,378  INFO CarManagerImpl:264 - Getting car from result set
+22:39:39,737  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Favorit, cartype = HATCHBACK, fueltype = PETROLin db
+   22:39:39,768  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Tatra , type = V3S, cartype = VAN, fueltype = DIESELin db
+   22:39:39,779  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:39,787  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:39,788  INFO CarManagerImpl:85 - Updating Car id = 1 ; manufacturer = Skodovka , type = Favorit, cartype = HATCHBACK, fueltype = PETROLin db
+   22:39:39,813  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:39,819  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:39,820  INFO CarManagerImpl:85 - Updating Car id = 1 ; manufacturer = Skodovka , type = x, cartype = HATCHBACK, fueltype = PETROLin db
+   22:39:39,835  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:39,837  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:39,837  INFO CarManagerImpl:85 - Updating Car id = 1 ; manufacturer = Skodovka , type = x, cartype = HATCHBACK, fueltype = CNGin db
+   22:39:39,846  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:39,848  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:39,848  INFO CarManagerImpl:85 - Updating Car id = 1 ; manufacturer = Skodovka , type = x, cartype = CONVERTIBLE, fueltype = CNGin db
+   22:39:39,857  INFO CarManagerImpl:178 - Finding car id 2 in db
+   22:39:39,859  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:41,457  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:41,477  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:41,484  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:41,485  INFO CarManagerImpl:85 - Updating Car id = 0 ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:42,311  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:42,332  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:42,339  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:43,144  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:43,165  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Superb, cartype = ESTATE, fueltype = CNGin db
+   22:39:43,175  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:43,185  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:43,185  INFO CarManagerImpl:178 - Finding car id 2 in db
+   22:39:43,188  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:43,195  INFO CarManagerImpl:134 - Deleting fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPG in db
+   22:39:43,196  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPG
+   22:39:43,212  INFO CarManagerImpl:141 - Deleting Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:43,231  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:43,233  INFO CarManagerImpl:178 - Finding car id 2 in db
+   22:39:43,235  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:46,196  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:46,217  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:46,224  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:46,985  INFO CarManagerImpl:199 - Finding all cars in db
+   22:39:46,998  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = BMW , type = M3, cartype = SPORT, fueltype = PETROLin db
+   22:39:47,017  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = DIESELin db
+   22:39:47,028  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:47,037  INFO CarManagerImpl:199 - Finding all cars in db
+   22:39:47,040  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:47,040  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:47,040  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:49,282  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = DIESELin db
+   22:39:49,303  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:49,310  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:50,781  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Superb, cartype = ESTATE, fueltype = CNGin db
+   22:39:50,801  INFO CarManagerImpl:134 - Deleting fillups of Car id = 0 ; manufacturer = Skoda , type = Superb, cartype = ESTATE, fueltype = CNG in db
+   22:39:50,802  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 0 ; manufacturer = Skoda , type = Superb, cartype = ESTATE, fueltype = CNG
+   22:39:50,814  INFO CarManagerImpl:141 - Deleting Car id = 0 ; manufacturer = Skoda , type = Superb, cartype = ESTATE, fueltype = CNGin db
+   22:39:51,613  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:51,632  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:51,639  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:52,468  INFO CarManagerImpl:178 - Finding car id 1098 in db
+   22:39:52,480  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = BMW , type = M3, cartype = SPORT, fueltype = PETROLin db
+   22:39:52,500  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:52,502  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:54,023  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = SEDAN, fueltype = LPGin db
+   22:39:54,055  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:54,062  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:55,577  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Superb, cartype = ESTATE, fueltype = CNGin db
+   22:39:57,174  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:39:57,198  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 100.00; of carID = 1in db
+   22:39:57,219  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 200.00; of carID = 1in db
+   22:39:57,230  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 20.00, distance = 100.00; of carID = 1in db
+   22:39:57,241  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 20.00, distance = 1000.00; of carID = 1in db
+   22:39:57,252  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 80.00, distance = 1000.00; of carID = 1in db
+   22:39:57,263  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROL
+   22:39:57,283  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:57,291  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:57,292  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:57,293  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:57,294  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:57,295  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:57,296  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:57,297  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:57,298  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:57,299  INFO CarManagerImpl:264 - Getting car from result set
+   22:39:58,129  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:39:58,162  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROL
+   22:39:58,183  WARN FillUpManagerImpl:73 - 1970-01-04 is after 1970-01-01
+   22:39:58,928  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:39:58,950  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Rapid, cartype = ESTATE, fueltype = PETROLin db
+   22:39:58,961  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 100.00; of carID = 1in db
+   22:39:58,983  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:39:58,995  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:00,004  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:00,030  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 100.00; of carID = 1in db
+   22:40:00,052  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-02, litres = 108.00, distance = 1008.00; of carID = 1in db
+   22:40:00,063  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-02, litres = 1009.00, distance = 8.00; of carID = 1in db
+   22:40:00,074  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-12, litres = 1009.00, distance = 8.00; of carID = 1in db
+   22:40:00,085  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Fabia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:00,096  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 500.00, distance = 666.00; of carID = 2in db
+   22:40:00,107  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROL
+   22:40:00,129  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:00,138  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:00,139  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:00,141  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:00,141  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:00,143  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:00,143  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:00,145  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:00,145  INFO FillUpManagerImpl:77 - filter only fillups in time range
+   22:40:01,218  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:01,240  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 100.00; of carID = 1in db
+   22:40:01,262  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 108.00, distance = 1008.00; of carID = 1in db
+   22:40:01,273  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Fabia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:01,284  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 500.00, distance = 666.00; of carID = 2in db
+   22:40:01,295  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROL
+   22:40:01,312  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:01,320  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:01,321  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:01,323  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:02,050  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:02,072  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 100.00; of carID = 1in db
+   22:40:02,094  INFO FillUpManagerImpl:45 - finding all fillups of Car id = 1 ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROL
+   22:40:02,112  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:02,120  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:02,951  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:02,972  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:02,994  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:03,000  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:03,008  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:03,873  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:03,893  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:03,915  INFO FillUpManagerImpl:122 - deleting FillUp id = 0 ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:04,672  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:04,692  INFO FillUpManagerImpl:160 - finding fillup id 1098 in db
+   22:40:04,705  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:04,725  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:04,727  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:04,735  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:05,582  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:05,602  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:05,624  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 1009.00, distance = 91000.00; of carID = 1in db
+   22:40:05,635  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:05,642  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:05,651  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:05,652  INFO FillUpManagerImpl:80 - updating FillUp id = 1 ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:05,668  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:05,670  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:05,672  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:05,673  INFO FillUpManagerImpl:80 - updating FillUp id = 1 ; date = 1970-01-01, litres = 100.00, distance = 1.00; of carID = 1in db
+   22:40:05,679  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:05,681  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:05,682  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:05,683  INFO FillUpManagerImpl:80 - updating FillUp id = 1 ; date = 1970-01-01, litres = 2.00, distance = 1.00; of carID = 1in db
+   22:40:06,425  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:06,446  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:06,468  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:06,478  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:06,490  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:06,499  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:06,500  INFO FillUpManagerImpl:160 - finding fillup id 2 in db
+   22:40:06,502  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:06,504  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:06,505  INFO FillUpManagerImpl:122 - deleting FillUp id = 1 ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:06,523  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:06,525  INFO FillUpManagerImpl:160 - finding fillup id 2 in db
+   22:40:06,527  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:06,528  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:07,347  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:08,179  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:08,199  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:08,221  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:08,228  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:08,236  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:09,034  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:09,877  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:09,897  INFO FillUpManagerImpl:181 - finding all fill ups in db
+   22:40:09,908  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:09,919  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 10.00, distance = 9.50; of carID = 1in db
+   22:40:09,931  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 14.00, distance = 9.50; of carID = 1in db
+   22:40:09,941  INFO FillUpManagerImpl:181 - finding all fill ups in db
+   22:40:09,944  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:09,951  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:09,952  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:09,954  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:09,954  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:09,955  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:10,743  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:10,763  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:10,785  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:10,791  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:10,800  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:10,802  INFO FillUpManagerImpl:80 - updating FillUp id = 0 ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:11,586  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:11,606  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:11,628  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:11,635  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:11,643  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:12,463  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:12,483  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
+   22:40:12,505  INFO FillUpManagerImpl:160 - finding fillup id 1 in db
+   22:40:12,511  INFO CarManagerImpl:178 - Finding car id 1 in db
+   22:40:12,519  INFO CarManagerImpl:264 - Getting car from result set
+   22:40:13,262  INFO CarManagerImpl:41 - Inserting Car id = null ; manufacturer = Skoda , type = Octavia, cartype = ESTATE, fueltype = PETROLin db
+   22:40:13,282  INFO FillUpManagerImpl:36 - adding FillUp id = null ; date = 1970-01-01, litres = 100.00, distance = 1000.00; of carID = 1in db
    

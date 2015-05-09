@@ -13,6 +13,7 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.swing.SwingWorker;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -22,9 +23,10 @@ import javax.swing.table.AbstractTableModel;
 class FillUpTableModel extends AbstractTableModel {
 
     private final FillUpManagerImpl fillupManager = new FillUpManagerImpl();
-    Locale defaultLocale = Locale.getDefault();
-    ResourceBundle text = ResourceBundle.getBundle("Text",defaultLocale);
     
+    Locale defaultLocale = Locale.getDefault();
+    ResourceBundle text = ResourceBundle.getBundle("Text", defaultLocale);
+
     public FillUpTableModel() {
         fillupManager.setDataSource(DBHelper.getDataSource());
     }
@@ -59,12 +61,12 @@ class FillUpTableModel extends AbstractTableModel {
                 throw new IllegalArgumentException("columnIndex");
         }
     }
-    
+
     @Override
     public String getColumnName(int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return   text.getString("date");
+                return text.getString("date");
             case 1:
                 return text.getString("filled_car");
             case 2:
@@ -97,29 +99,42 @@ class FillUpTableModel extends AbstractTableModel {
     }
 
     @Override
-    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+    public void setValueAt(final Object aValue, final int rowIndex, final int columnIndex) {
         List<FillUp> fillups = fillupManager.findAllFillUps();
-        FillUp fillup = fillups.get(rowIndex);
+        final FillUp fillup = fillups.get(rowIndex);
 
-        switch (columnIndex) {
-            case 0:
-                java.util.Date utilDate = (java.util.Date) aValue;
-                fillup.setDate(new java.sql.Date(utilDate.getTime()));
-                break;
-            case 1:
-                fillup.setFilledCar((Car) aValue);
-                break;
-            case 2:
-                fillup.setLitresFilled((Double) aValue);
-                break;
-            case 3:
-                fillup.setDistanceFromLastFillUp((Double) aValue);
-                break;
-            default:
-                throw new IllegalArgumentException("columnIndex");
-        }
-        fillupManager.updateFillUp(fillup);
-        fireTableCellUpdated(rowIndex, columnIndex);
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                switch (columnIndex) {
+                    case 0:
+                        java.util.Date utilDate = (java.util.Date) aValue;
+                        fillup.setDate(new java.sql.Date(utilDate.getTime()));
+                        break;
+                    case 1:
+                        fillup.setFilledCar((Car) aValue);
+                        break;
+                    case 2:
+                        fillup.setLitresFilled((Double) aValue);
+                        break;
+                    case 3:
+                        fillup.setDistanceFromLastFillUp((Double) aValue);
+                        break;
+                    default:
+                        throw new IllegalArgumentException("columnIndex");
+                }
+                return null;
+            }
+
+            @Override
+            public void done() {
+                fillupManager.updateFillUp(fillup);
+                fireTableCellUpdated(rowIndex, columnIndex);
+            }
+
+        }.execute();
+
     }
 
     @Override
@@ -137,22 +152,42 @@ class FillUpTableModel extends AbstractTableModel {
         }
     }
 
-    public void addFillUp(FillUp fillUp) {
-        if (fillUp == null) {
-            throw new IllegalArgumentException("fillUp");
-        }
-        fillupManager.createFillUp(fillUp);
+    public void addFillUp(final FillUp fillUp) {
 
-        int lastRow = fillupManager.findAllFillUps().size() - 1;
-        fireTableRowsInserted(lastRow, lastRow);
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                fillupManager.createFillUp(fillUp);
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                int lastRow = fillupManager.findAllFillUps().size() - 1;
+                fireTableRowsInserted(lastRow, lastRow);
+            }
+
+        }.execute();
+
     }
 
-    public void removeRow(int rowIndex) {
-        List<FillUp> fillups = fillupManager.findAllFillUps();
-        FillUp fillup = fillups.get(rowIndex);
-        
-        fillupManager.deleteFillUp(fillup);
-        int lastRow = fillupManager.findAllFillUps().size() - 1;
-        fireTableRowsDeleted(lastRow, lastRow);
+    public void removeFillUp(final FillUp fillUp) {
+
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                fillupManager.deleteFillUp(fillUp);
+                return null;
+            }
+
+            @Override
+            public void done() {
+                int lastRow = fillupManager.findAllFillUps().size() - 1;
+                fireTableRowsDeleted(lastRow, lastRow);
+            }
+        }.execute();
+
     }
 }
